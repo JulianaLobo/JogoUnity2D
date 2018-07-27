@@ -1,0 +1,11 @@
+Idle - 0
+
+Jump - 1
+
+Run - 2
+
+Falling - 3
+
+Walk - 4
+
+Dead - 5
