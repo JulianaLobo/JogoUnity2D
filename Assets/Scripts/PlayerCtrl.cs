@@ -92,9 +92,12 @@ public class PlayerCtrl : MonoBehaviour {
     }
 
 	void Jump(){
-        isJumping = true;
-		rb.AddForce(new Vector2(0f, jumpSpeed));
-        anim.SetInteger("State", 1);
+        if (isGrounded)
+        {
+            isJumping = true;
+            rb.AddForce(new Vector2(0f, jumpSpeed));
+            anim.SetInteger("State", 1);
+        }
 	}
 
     private void OnCollisionEnter2D(Collision2D other)
