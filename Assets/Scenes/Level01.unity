@@ -177,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320842122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.17, y: -1.13, z: 0.6778682}
+  m_LocalPosition: {x: -9.17, y: -1.63, z: 0.6778682}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -827,6 +827,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 320842123}
   playerPrefab: {fileID: 1363039486380264, guid: f13a7c8550c076948b4f5b04693198de,
     type: 2}
+  timeToRespawn: 2
 --- !u!4 &1899698005
 Transform:
   m_ObjectHideFlags: 0
@@ -916,7 +917,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1954884005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -8.13, y: -2.01, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -938,6 +939,7 @@ MonoBehaviour:
   lookAheadFactor: 3
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
+  yMin: -3
 --- !u!1 &2131166045
 GameObject:
   m_ObjectHideFlags: 0

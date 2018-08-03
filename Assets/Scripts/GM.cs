@@ -14,6 +14,8 @@ public class GM : MonoBehaviour {
 
     PlayerCtrl player;
 
+    public float timeToRespawn = 2f;
+
     private void Awake()
     {
         if(instance == null)
@@ -36,11 +38,28 @@ public class GM : MonoBehaviour {
 	}
 	
 	void Update () {
+        if(player == null)
+        {
+            GameObject obj = GameObject.FindGameObjectWithTag("Player");
+            if (obj != null)
+            {
+                player = obj.GetComponent<PlayerCtrl>();
+            }
+        }
 		
 	}
 
     public void RespawnPlayer()
     {
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    public void KillPlayer()
+    {
+        if(player != null)
+        {
+            Destroy(player.gameObject);
+            Invoke("RespawnPlayer", timeToRespawn);
+        }
     }
 }
